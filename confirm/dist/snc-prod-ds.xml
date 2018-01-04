@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+    <local-tx-datasource>
+        <jndi-name>salesAndCostDetails</jndi-name>
+        <connection-url>jdbc:oracle:thin:@gpserp02.corporate.ge.com:1580:gpserp02</connection-url>
+        <driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+        <user-name>GEPSCSPORTAL</user-name>
+        <password>kkow#84xou</password>
+        <min-pool-size>10</min-pool-size>
+        <max-pool-size>100</max-pool-size>
+        <blocking-timeout-millis>5000</blocking-timeout-millis>
+        <idle-timeout-minutes>1</idle-timeout-minutes>
+        <exception-sorter-class-name>org.jboss.resource.adapter.jdbc.vendor.OracleExceptionSorter</exception-sorter-class-name>
+        <metadata>
+        <type-mapping>Oracle11g</type-mapping>
+        </metadata>
+    </local-tx-datasource>
+</datasources>

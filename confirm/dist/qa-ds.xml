@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema">
+	<datasource jndi-name="java:jboss/datasources/pgsaa" pool-name="pgsaa">
+		<connection-url>jdbc:oracle:thin:@ennaaq01.tsg.ge.com:1562:ennaaq01</connection-url>
+		<driver>oracle</driver>
+		<pool>
+			<min-pool-size>5</min-pool-size>
+			<max-pool-size>100</max-pool-size>
+		</pool>
+		<security>
+			<user-name>cnfm_web</user-name>
+			<password></password>
+		</security>
+		<statement>
+			<track-statements>true</track-statements>
+		</statement>
+		<transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
+		<timeout>
+			<idle-timeout-minutes>5</idle-timeout-minutes>
+		</timeout>
+	</datasource>
+	<datasource jndi-name="java:jboss/datasources/salesAndCostDetails" pool-name="salesAndCostDetails">
+        <connection-url>jdbc:oracle:thin:@gpshpc76.tsg.ge.com:1552:gpshpc76</connection-url>
+        <driver>oracle</driver>
+        <pool>
+            <min-pool-size>1</min-pool-size>
+            <max-pool-size>100</max-pool-size>
+        </pool>
+        <security>
+            <user-name>GEPSCSPORTAL</user-name>
+            <password>GEPSCSPORTAL1234</password>
+        </security> 
+        <statement>
+            <track-statements>true</track-statements>
+        </statement>
+        <transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
+        <timeout>
+            <idle-timeout-minutes>1</idle-timeout-minutes>
+        </timeout>
+    </datasource>
+</datasources>

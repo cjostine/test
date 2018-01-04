@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+  <local-tx-datasource>
+    <jndi-name>pgsaa</jndi-name>
+    <connection-url>jdbc:oracle:thin:@ennaaq01.tsg.ge.com:1562:ennaaq01</connection-url>
+    <driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+    <user-name>cnfm_web</user-name>
+    <password></password>
+	<!-- Checks the Oracle error codes and messages for fatal errors -->
+    <exception-sorter-class-name>org.jboss.resource.adapter.jdbc.vendor.OracleExceptionSorter</exception-sorter-class-name>
+	<!-- Uses the pingDatabase method to check a connection is still valid before handing it out from the pool --> 
+    <valid-connection-checker-class-name>org.jboss.resource.adapter.jdbc.vendor.OracleValidConnectionChecker</valid-connection-checker-class-name>
+    <metadata>
+      <type-mapping>Oracle9i</type-mapping>
+    </metadata>
+    <min-pool-size>5</min-pool-size>
+    <max-pool-size>100</max-pool-size>
+  </local-tx-datasource>
+</datasources>
