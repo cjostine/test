@@ -1,0 +1,547 @@
+blob
+mark :1
+data 0
+
+blob
+mark :2
+data 0
+
+blob
+mark :3
+data 0
+
+blob
+mark :4
+data 109
+This file is added to a directory that had earlier been pruned, to
+demonstrate that the directory reappears.
+
+blob
+mark :5
+data 0
+
+blob
+mark :6
+data 0
+
+blob
+mark :7
+data 0
+
+blob
+mark :8
+data 73
+This is file 1, always committed with other numbers, never with letters.
+
+blob
+mark :9
+data 100
+This is file 1, always committed with other numbers, never with letters.
+
+A random change on trunk.
+
+blob
+mark :10
+data 73
+This is file 2, always committed with other numbers, never with letters.
+
+blob
+mark :11
+data 100
+This is file 2, always committed with other numbers, never with letters.
+
+A random change on trunk.
+
+blob
+mark :12
+data 73
+This is file 3, always committed with other numbers, never with letters.
+
+blob
+mark :13
+data 100
+This is file 3, always committed with other numbers, never with letters.
+
+A random change on trunk.
+
+blob
+mark :14
+data 73
+This is file 4, always committed with other numbers, never with letters.
+
+blob
+mark :15
+data 100
+This is file 4, always committed with other numbers, never with letters.
+
+A random change on trunk.
+
+blob
+mark :16
+data 73
+This is file 5, always committed with other numbers, never with letters.
+
+blob
+mark :17
+data 100
+This is file 5, always committed with other numbers, never with letters.
+
+A random change on trunk.
+
+blob
+mark :18
+data 73
+This is file a, always committed with other letters, never with numbers.
+
+blob
+mark :19
+data 100
+This is file a, always committed with other letters, never with numbers.
+
+A random change on trunk.
+
+blob
+mark :20
+data 73
+This is file b, always committed with other letters, never with numbers.
+
+blob
+mark :21
+data 100
+This is file b, always committed with other letters, never with numbers.
+
+A random change on trunk.
+
+blob
+mark :22
+data 73
+This is file c, always committed with other letters, never with numbers.
+
+blob
+mark :23
+data 100
+This is file c, always committed with other letters, never with numbers.
+
+A random change on trunk.
+
+blob
+mark :24
+data 73
+This is file d, always committed with other letters, never with numbers.
+
+blob
+mark :25
+data 100
+This is file d, always committed with other letters, never with numbers.
+
+A random change on trunk.
+
+blob
+mark :26
+data 73
+This is file e, always committed with other letters, never with numbers.
+
+blob
+mark :27
+data 100
+This is file e, always committed with other letters, never with numbers.
+
+A random change on trunk.
+
+blob
+mark :28
+data 155
+This file was added in between the addition of sub/first and
+sub/second, to demonstrate that when those two are both removed, the
+pruning stops with sub/.
+
+blob
+mark :29
+data 0
+
+blob
+mark :30
+data 0
+
+blob
+mark :31
+data 0
+
+blob
+mark :32
+data 259
+This is the file `default' in the top level of the project.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+This line was added on branch B_MIXED only (affecting 3 files).
+
+blob
+mark :33
+data 227
+This is the file `default' in the top level of the project.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+First change on branch B_SPLIT.
+
+blob
+mark :34
+data 127
+This is the file `default' in the top level of the project.
+
+Every directory in the `proj' project has a file named `default'.
+
+blob
+mark :35
+data 194
+This is the file `default' in the top level of the project.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+blob
+mark :36
+data 221
+This is sub1/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+This line was added on branch B_MIXED only (affecting 3 files).
+
+blob
+mark :37
+data 189
+This is sub1/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+First change on branch B_SPLIT.
+
+blob
+mark :38
+data 89
+This is sub1/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+blob
+mark :39
+data 156
+This is sub1/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+blob
+mark :40
+data 261
+This is sub1/subsubA/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added by the first commit (affecting two files).
+
+This line was added in the second commit (affecting all 7 files).
+
+First change on branch B_SPLIT.
+
+blob
+mark :41
+data 97
+This is sub1/subsubA/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+blob
+mark :42
+data 161
+This is sub1/subsubA/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added by the first commit (affecting two files).
+
+blob
+mark :43
+data 228
+This is sub1/subsubA/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added by the first commit (affecting two files).
+
+This line was added in the second commit (affecting all 7 files).
+
+blob
+mark :44
+data 624
+This is sub1/subsubB/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+This bit was committed on trunk about an hour after an earlier change
+to everyone else on branch B_SPLIT.  Afterwards, we'll finally branch
+this file to B_SPLIT, but rooted in a revision that didn't exist at
+the time the rest of B_SPLIT was created.
+
+This change affects sub3/default and sub1/subsubB/default, on branch
+B_SPLIT.  Note that the latter file did not even exist on this branch
+until after some other files had had revisions committed on B_SPLIT.
+
+blob
+mark :45
+data 97
+This is sub1/subsubB/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+blob
+mark :46
+data 164
+This is sub1/subsubB/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+blob
+mark :47
+data 415
+This is sub1/subsubB/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+This bit was committed on trunk about an hour after an earlier change
+to everyone else on branch B_SPLIT.  Afterwards, we'll finally branch
+this file to B_SPLIT, but rooted in a revision that didn't exist at
+the time the rest of B_SPLIT was created.
+
+blob
+mark :48
+data 309
+This is sub2/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+The same commit added these two lines here on trunk, and two similar
+lines to ./branch_B_MIXED_only on branch B_MIXED.
+
+First change on branch B_SPLIT.
+
+blob
+mark :49
+data 89
+This is sub2/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+blob
+mark :50
+data 156
+This is sub2/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+blob
+mark :51
+data 276
+This is sub2/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+The same commit added these two lines here on trunk, and two similar
+lines to ./branch_B_MIXED_only on branch B_MIXED.
+
+blob
+mark :52
+data 67
+This file was added on branch B_MIXED.  It never existed on trunk.
+
+blob
+mark :53
+data 175
+This file was added on branch B_MIXED.  It never existed on trunk.
+
+The same commit added these two lines here on branch B_MIXED, and two
+similar lines to ./default on trunk.
+
+blob
+mark :54
+data 162
+This is sub2/subsub2/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added on branch B_MIXED only (affecting 3 files).
+
+blob
+mark :55
+data 197
+This is sub2/subsub2/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+First change on branch B_SPLIT.
+
+blob
+mark :56
+data 97
+This is sub2/subsub2/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+blob
+mark :57
+data 164
+This is sub2/subsub2/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added in the second commit (affecting all 7 files).
+
+blob
+mark :58
+data 429
+This is sub3/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added by the first commit (affecting two files).
+
+This line was added in the second commit (affecting all 7 files).
+
+This change affects sub3/default and sub1/subsubB/default, on branch
+B_SPLIT.  Note that the latter file did not even exist on this branch
+until after some other files had had revisions committed on B_SPLIT.
+
+blob
+mark :59
+data 89
+This is sub3/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+blob
+mark :60
+data 153
+This is sub3/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added by the first commit (affecting two files).
+
+blob
+mark :61
+data 220
+This is sub3/default.
+
+Every directory in the `proj' project has a file named `default'.
+
+This line was added by the first commit (affecting two files).
+
+This line was added in the second commit (affecting all 7 files).
+
+blob
+mark :62
+data 7
+hello
+
+
+blob
+mark :63
+data 34
+hello
+modified after checked in
+
+
+
+blob
+mark :64
+data 28
+#!/bin/sh
+echo Hello world!
+
+blob
+mark :65
+data 7
+hello
+
+
+blob
+mark :66
+data 34
+hello
+modified after checked in
+
+
+
+blob
+mark :67
+data 7
+hello
+
+
+blob
+mark :68
+data 34
+hello
+modified after checked in
+
+
+
+blob
+mark :69
+data 41
+Just a test for spaces in the file name.
+
+blob
+mark :70
+data 7
+hello
+
+
+blob
+mark :71
+data 34
+hello
+modified after checked in
+
+
+
+blob
+mark :72
+data 7
+hello
+
+
+blob
+mark :73
+data 34
+hello
+modified after checked in
+
+
+

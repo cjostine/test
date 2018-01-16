@@ -1,0 +1,488 @@
+commit refs/heads/master
+mark :1000000000
+committer J. Random <jrandom@example.com> 740382368 +0000
+data 12
+Updated CVS
+
+M 100644 :1 full-prune/first
+M 100644 :5 full-prune-reappear/sub/first
+M 100644 :29 partial-prune/sub/first
+
+commit refs/heads/master
+mark :1000000001
+committer J. Random <jrandom@example.com> 771918368 +0000
+data 12
+Updated CVS
+
+M 100644 :28 partial-prune/permanent
+
+commit refs/heads/master
+mark :1000000002
+committer J. Random <jrandom@example.com> 796635842 +0000
+data 72
+Original sources from CVS-1.4A2 munged to fit our directory structure.
+
+
+M 100644 :3 full-prune/second
+M 100644 :7 full-prune-reappear/sub/second
+M 100644 :31 partial-prune/sub/second
+
+commit refs/heads/master
+mark :1000000003
+committer J. Random <jrandom@example.com> 818641673 +0000
+data 93
+Remove the file 'first', for the first time.
+
+(Note that its sibling 'second' still exists.)
+
+D full-prune/first
+D full-prune-reappear/sub/first
+D partial-prune/sub/first
+
+commit refs/heads/master
+mark :1000000004
+committer J. Random <jrandom@example.com> 820348642 +0000
+data 60
+Remove the file 'first' again, which should have no effect.
+
+
+commit refs/heads/master
+mark :1000000005
+committer J. Random <jrandom@example.com> 840585227 +0000
+data 140
+Remove the file 'second'.
+
+Since 'first' was already removed, removing 'second' empties the
+directory, so the directory itself gets pruned.
+
+D full-prune/second
+D full-prune-reappear/sub/second
+D partial-prune/sub/second
+
+commit refs/heads/master
+mark :1000000006
+committer J. Random <jrandom@example.com> 1033257600 +0000
+data 26
+*** empty log message ***
+
+M 100644 :62 single-files/"double-double-quotes"
+M 100644 :65 single-files/can't-avoid-quotes
+M 100644 :72 single-files/quotin'-in-dirname/foo
+M 100644 :67 single-files/single-double-quote"
+M 100644 :70 single-files/twoquick
+
+commit refs/heads/master
+mark :1000000007
+committer J. Random <jrandom@example.com> 1033257601 +0000
+data 26
+*** empty log message ***
+
+M 100644 :63 single-files/"double-double-quotes"
+M 100644 :66 single-files/can't-avoid-quotes
+M 100644 :73 single-files/quotin'-in-dirname/foo
+M 100644 :68 single-files/single-double-quote"
+M 100644 :71 single-files/twoquick
+
+commit refs/heads/TAG.FIXUP
+mark :1000000008
+committer cvs2git <admin@example.com> 1033257602 +0000
+data 62
+This commit was manufactured by cvs2git to create tag 'after'.
+from :1000000007
+M 100644 :66 single-files/can't-avoid-quotes
+M 100644 :63 single-files/"double-double-quotes"
+M 100644 :71 single-files/twoquick
+M 100644 :68 single-files/single-double-quote"
+M 100644 :73 single-files/quotin'-in-dirname/foo
+D partial-prune/permanent
+
+reset refs/tags/after
+from :1000000008
+reset refs/heads/TAG.FIXUP
+
+commit refs/heads/master
+mark :1000000009
+committer J. Random <jrandom@example.com> 1038684462 +0000
+data 9
+imported
+
+M 100644 :69 single-files/space fname
+
+commit refs/heads/master
+mark :1000000010
+committer J. Random <jrandom@example.com> 1043502237 +0000
+data 16
+initial checkin
+
+M 100755 :64 single-files/attr-exec
+
+commit refs/heads/master
+mark :1000000011
+committer J. Random <jrandom@example.com> 1053645619 +0000
+data 16
+Initial import.
+
+M 100644 :34 proj/default
+M 100644 :38 proj/sub1/default
+M 100644 :41 proj/sub1/subsubA/default
+M 100644 :45 proj/sub1/subsubB/default
+M 100644 :49 proj/sub2/default
+M 100644 :56 proj/sub2/subsubA/default
+M 100644 :59 proj/sub3/default
+
+commit refs/heads/TAG.FIXUP
+mark :1000000012
+committer cvs2git <admin@example.com> 1053645620 +0000
+data 76
+This commit was manufactured by cvs2git to create tag 'T_ALL_INITIAL_FILES'.
+from :1000000011
+M 100644 :56 proj/sub2/subsubA/default
+M 100644 :38 proj/sub1/default
+M 100644 :49 proj/sub2/default
+M 100644 :59 proj/sub3/default
+M 100644 :41 proj/sub1/subsubA/default
+M 100644 :45 proj/sub1/subsubB/default
+M 100644 :34 proj/default
+D single-files/quotin'-in-dirname/foo
+D single-files/single-double-quote"
+D partial-prune/permanent
+D single-files/space fname
+D single-files/"double-double-quotes"
+D single-files/attr-exec
+D single-files/can't-avoid-quotes
+D single-files/twoquick
+
+reset refs/tags/T_ALL_INITIAL_FILES
+from :1000000012
+reset refs/heads/TAG.FIXUP
+
+commit refs/heads/TAG.FIXUP
+mark :1000000013
+committer cvs2git <admin@example.com> 1053645621 +0000
+data 84
+This commit was manufactured by cvs2git to create tag
+'T_ALL_INITIAL_FILES_BUT_ONE'.
+from :1000000011
+M 100644 :56 proj/sub2/subsubA/default
+M 100644 :59 proj/sub3/default
+M 100644 :38 proj/sub1/default
+M 100644 :49 proj/sub2/default
+M 100644 :41 proj/sub1/subsubA/default
+M 100644 :34 proj/default
+D proj/sub1/subsubB/default
+D single-files/quotin'-in-dirname/foo
+D single-files/single-double-quote"
+D partial-prune/permanent
+D single-files/space fname
+D single-files/"double-double-quotes"
+D single-files/attr-exec
+D single-files/can't-avoid-quotes
+D single-files/twoquick
+
+reset refs/tags/T_ALL_INITIAL_FILES_BUT_ONE
+from :1000000013
+reset refs/heads/TAG.FIXUP
+
+commit refs/heads/B_FROM_INITIALS
+mark :1000000014
+committer cvs2git <admin@example.com> 1053645622 +0000
+data 75
+This commit was manufactured by cvs2git to create branch 'B_FROM_INITIALS'.
+from :1000000011
+M 100644 :49 proj/sub2/default
+M 100644 :56 proj/sub2/subsubA/default
+M 100644 :45 proj/sub1/subsubB/default
+M 100644 :38 proj/sub1/default
+M 100644 :59 proj/sub3/default
+M 100644 :41 proj/sub1/subsubA/default
+M 100644 :34 proj/default
+D single-files/quotin'-in-dirname/foo
+D single-files/single-double-quote"
+D partial-prune/permanent
+D single-files/space fname
+D single-files/"double-double-quotes"
+D single-files/attr-exec
+D single-files/can't-avoid-quotes
+D single-files/twoquick
+
+commit refs/heads/B_FROM_INITIALS_BUT_ONE
+mark :1000000015
+committer cvs2git <admin@example.com> 1053645623 +0000
+data 83
+This commit was manufactured by cvs2git to create branch
+'B_FROM_INITIALS_BUT_ONE'.
+from :1000000011
+M 100644 :56 proj/sub2/subsubA/default
+M 100644 :38 proj/sub1/default
+M 100644 :59 proj/sub3/default
+M 100644 :41 proj/sub1/subsubA/default
+M 100644 :34 proj/default
+M 100644 :49 proj/sub2/default
+D proj/sub1/subsubB/default
+D single-files/quotin'-in-dirname/foo
+D single-files/single-double-quote"
+D partial-prune/permanent
+D single-files/space fname
+D single-files/"double-double-quotes"
+D single-files/attr-exec
+D single-files/can't-avoid-quotes
+D single-files/twoquick
+
+commit refs/heads/master
+mark :1000000016
+committer J. Random <jrandom@example.com> 1053648926 +0000
+data 43
+First commit to proj, affecting two files.
+
+M 100644 :42 proj/sub1/subsubA/default
+M 100644 :60 proj/sub3/default
+
+commit refs/heads/master
+mark :1000000017
+committer J. Random <jrandom@example.com> 1053649073 +0000
+data 46
+Second commit to proj, affecting all 7 files.
+
+M 100644 :35 proj/default
+M 100644 :39 proj/sub1/default
+M 100644 :43 proj/sub1/subsubA/default
+M 100644 :46 proj/sub1/subsubB/default
+M 100644 :50 proj/sub2/default
+M 100644 :57 proj/sub2/subsubA/default
+M 100644 :61 proj/sub3/default
+
+commit refs/heads/TAG.FIXUP
+mark :1000000018
+committer cvs2git <admin@example.com> 1053649074 +0000
+data 64
+This commit was manufactured by cvs2git to create tag 'T_MIXED'.
+from :1000000017
+M 100644 :46 proj/sub1/subsubB/default
+M 100644 :39 proj/sub1/default
+M 100644 :43 proj/sub1/subsubA/default
+M 100644 :50 proj/sub2/default
+M 100644 :35 proj/default
+M 100644 :56 proj/sub2/subsubA/default
+M 100644 :60 proj/sub3/default
+D single-files/quotin'-in-dirname/foo
+D single-files/single-double-quote"
+D partial-prune/permanent
+D single-files/space fname
+D single-files/"double-double-quotes"
+D single-files/attr-exec
+D single-files/can't-avoid-quotes
+D single-files/twoquick
+
+reset refs/tags/T_MIXED
+from :1000000018
+reset refs/heads/TAG.FIXUP
+
+commit refs/heads/B_MIXED
+mark :1000000019
+committer cvs2git <admin@example.com> 1053649075 +0000
+data 67
+This commit was manufactured by cvs2git to create branch 'B_MIXED'.
+from :1000000017
+M 100644 :46 proj/sub1/subsubB/default
+M 100644 :39 proj/sub1/default
+M 100644 :50 proj/sub2/default
+M 100644 :43 proj/sub1/subsubA/default
+M 100644 :35 proj/default
+M 100644 :60 proj/sub3/default
+M 100644 :56 proj/sub2/subsubA/default
+D single-files/quotin'-in-dirname/foo
+D single-files/single-double-quote"
+D partial-prune/permanent
+D single-files/space fname
+D single-files/"double-double-quotes"
+D single-files/attr-exec
+D single-files/can't-avoid-quotes
+D single-files/twoquick
+
+commit refs/heads/B_MIXED
+mark :1000000020
+committer J. Random <jrandom@example.com> 1053649526 +0000
+data 30
+Add a file on branch B_MIXED.
+
+M 100644 :52 proj/sub2/branch_B_MIXED_only
+
+commit refs/heads/B_MIXED
+mark :1000000021
+committer J. Random <jrandom@example.com> 1053649896 +0000
+data 39
+Modify three files, on branch B_MIXED.
+
+M 100644 :32 proj/default
+M 100644 :36 proj/sub1/default
+M 100644 :54 proj/sub2/subsubA/default
+
+commit refs/heads/master
+mark :1000000022
+committer J. Random <jrandom@example.com> 1053650931 +0000
+data 71
+A single commit affecting one file on branch B_MIXED and one on trunk.
+
+M 100644 :51 proj/sub2/default
+
+commit refs/heads/B_SPLIT
+mark :1000000023
+committer cvs2git <admin@example.com> 1053650932 +0000
+data 67
+This commit was manufactured by cvs2git to create branch 'B_SPLIT'.
+from :1000000022
+M 100644 :39 proj/sub1/default
+M 100644 :61 proj/sub3/default
+M 100644 :51 proj/sub2/default
+M 100644 :43 proj/sub1/subsubA/default
+M 100644 :35 proj/default
+M 100644 :57 proj/sub2/subsubA/default
+D proj/sub1/subsubB/default
+D single-files/quotin'-in-dirname/foo
+D single-files/single-double-quote"
+D partial-prune/permanent
+D single-files/space fname
+D single-files/"double-double-quotes"
+D single-files/attr-exec
+D single-files/can't-avoid-quotes
+D single-files/twoquick
+
+commit refs/heads/B_MIXED
+mark :1000000024
+committer J. Random <jrandom@example.com> 1053650933 +0000
+data 71
+A single commit affecting one file on branch B_MIXED and one on trunk.
+
+M 100644 :53 proj/sub2/branch_B_MIXED_only
+
+commit refs/heads/master
+mark :1000000025
+committer J. Random <jrandom@example.com> 1053738121 +0000
+data 16
+Initial import.
+
+M 100644 :8 interleaved/1
+M 100644 :10 interleaved/2
+M 100644 :12 interleaved/3
+M 100644 :14 interleaved/4
+M 100644 :16 interleaved/5
+M 100644 :18 interleaved/a
+M 100644 :20 interleaved/b
+M 100644 :22 interleaved/c
+M 100644 :24 interleaved/d
+M 100644 :26 interleaved/e
+
+commit refs/heads/master
+mark :1000000026
+committer J. Random <jrandom@example.com> 1054599601 +0000
+data 25
+Committing numbers only.
+
+M 100644 :9 interleaved/1
+M 100644 :11 interleaved/2
+M 100644 :13 interleaved/3
+M 100644 :15 interleaved/4
+M 100644 :17 interleaved/5
+
+commit refs/heads/master
+mark :1000000027
+committer J. Random <jrandom@example.com> 1054599602 +0000
+data 25
+Committing letters only.
+
+M 100644 :19 interleaved/a
+M 100644 :21 interleaved/b
+M 100644 :23 interleaved/c
+M 100644 :25 interleaved/d
+M 100644 :27 interleaved/e
+
+commit refs/heads/B_SPLIT
+mark :1000000028
+committer J. Random <jrandom@example.com> 1054610431 +0000
+data 171
+First change on branch B_SPLIT.
+
+This change excludes sub3/default, because it was not part of this
+commit, and sub1/subsubB/default, which is not even on the branch yet.
+
+M 100644 :33 proj/default
+M 100644 :37 proj/sub1/default
+M 100644 :40 proj/sub1/subsubA/default
+M 100644 :48 proj/sub2/default
+M 100644 :55 proj/sub2/subsubA/default
+
+commit refs/heads/master
+mark :1000000029
+committer J. Random <jrandom@example.com> 1054614554 +0000
+data 319
+A trunk change to sub1/subsubB/default.  This was committed about an
+hour after an earlier change that affected most files on branch
+B_SPLIT.  This file is not on that branch yet, but after this commit,
+we'll branch to B_SPLIT, albeit rooted in a revision that didn't exist
+at the time the rest of B_SPLIT was created.
+
+M 100644 :47 proj/sub1/subsubB/default
+
+commit refs/heads/B_SPLIT
+mark :1000000030
+committer cvs2git <admin@example.com> 1054614555 +0000
+data 67
+This commit was manufactured by cvs2git to create branch 'B_SPLIT'.
+M 100644 :47 proj/sub1/subsubB/default
+
+commit refs/heads/B_SPLIT
+mark :1000000031
+committer J. Random <jrandom@example.com> 1054614793 +0000
+data 208
+This change affects sub3/default and sub1/subsubB/default, on branch
+B_SPLIT.  Note that the latter file did not even exist on this branch
+until after some other files had had revisions committed on B_SPLIT.
+
+M 100644 :44 proj/sub1/subsubB/default
+M 100644 :58 proj/sub3/default
+
+commit refs/heads/master
+mark :1000000032
+committer J. Random <jrandom@example.com> 1055276388 +0000
+data 12
+Updated CVS
+
+M 100644 :4 full-prune-reappear/appears-later
+
+commit refs/heads/TAG.FIXUP
+mark :1000000033
+committer cvs2git <admin@example.com> 1055276389 +0000
+data 66
+This commit was manufactured by cvs2git to create tag 'vendortag'.
+from :1000000025
+M 100644 :12 interleaved/3
+M 100644 :26 interleaved/e
+M 100644 :14 interleaved/4
+M 100644 :69 single-files/space fname
+M 100644 :28 partial-prune/permanent
+M 100644 :16 interleaved/5
+M 100755 :64 single-files/attr-exec
+M 100644 :18 interleaved/a
+M 100644 :20 interleaved/b
+M 100644 :8 interleaved/1
+M 100644 :22 interleaved/c
+M 100644 :10 interleaved/2
+M 100644 :24 interleaved/d
+M 100644 :38 proj/sub1/default
+M 100644 :45 proj/sub1/subsubB/default
+M 100644 :56 proj/sub2/subsubA/default
+M 100644 :59 proj/sub3/default
+M 100644 :49 proj/sub2/default
+M 100644 :41 proj/sub1/subsubA/default
+M 100644 :34 proj/default
+M 100644 :4 full-prune-reappear/appears-later
+D single-files/quotin'-in-dirname/foo
+D single-files/twoquick
+D single-files/single-double-quote"
+D single-files/"double-double-quotes"
+D single-files/can't-avoid-quotes
+
+reset refs/tags/vendortag
+from :1000000033
+reset refs/heads/TAG.FIXUP
+
